@@ -64,4 +64,4 @@ Chưa thử trên Windows và Mac thật.
 - **Codec MOSS-Audio-Tokenizer-Nano** (OpenMOSS-Team) và **sea-g2p**: thành phần của model. Xem giấy phép tại trang của từng thành phần.
 - **PySide6** (giao diện): theo giấy phép của Qt.
 
-Giấy phép cho mã trong repo này chưa được chọn.
+Mã trong repo này theo giấy phép MIT, xem [LICENSE](LICENSE). Giấy phép MIT không thay đổi điều kiện của model và giọng ở trên.
