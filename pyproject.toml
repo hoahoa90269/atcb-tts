@@ -1,0 +1,25 @@
+[project]
+name = "atcb-tts"
+version = "1.1.0"
+description = "ATCB: tạo giọng đọc mp3 (VieNeu-TTS) cho An Toàn Cùng Bé"
+requires-python = ">=3.10,<3.13"
+dependencies = [
+  "vieneu",
+  "onnxruntime<1.24",
+  "tqdm",
+  "numpy",
+  "soxr",
+  "lameenc",
+  "pyloudnorm",
+]
+
+[project.optional-dependencies]
+cuda = ["vieneu[cuda]"]
+gui = [
+    "pyside6-essentials>=6.12.0",
+]
+
+[tool.uv]
+package = false
+# llvmlite 0.46+ has no macOS Intel (x86_64) wheels; building from source fails
+constraint-dependencies = ["llvmlite>=0.43,<0.46", "numba>=0.60,<0.63"]

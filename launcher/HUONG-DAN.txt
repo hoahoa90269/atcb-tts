@@ -1,0 +1,40 @@
+ATCB GIỌNG ĐỌC - hướng dẫn cho cô
+=================================
+
+Công cụ này tạo giọng đọc (file mp3, giọng Kim Thanh) cho phần cô thêm hoặc sửa trên web An Toàn Cùng Bé.
+Công cụ chạy trên máy cô, không đăng nhập, không gửi gì lên mạng (trừ lần đầu tải model).
+
+3 BƯỚC
+1. Trên web, bấm "Xuất text đọc (.json)" ở màn tình huống, hoặc "Xuất phần còn thiếu" ở màn danh sách.
+2. Mở ATCB Giọng đọc (xem bên dưới), kéo file .json vào cửa sổ, bấm "Tạo giọng đọc". Xong thì bấm "Mở thư mục kết quả".
+3. Kéo cả thư mục mp3 vào ô "Tải lên thư mục mp3" trên web. Web tự gắn đúng chỗ và báo file nào bị từ chối.
+
+Chỉ cần vài câu (tên chủ đề mới, một câu vừa sửa)? Mở tab "Gõ câu", dán câu (nên bấm "Sao chép câu" trên web để khớp từng dấu),
+rồi tải từng file mp3 vào đúng ô của phần đó ở web.
+
+MỞ CÔNG CỤ
+- Giải nén file zip ra một thư mục (không chạy trực tiếp trong file zip).
+- Windows 10/11: bấm đúp ChayCongCu.bat.
+- macOS 12 trở lên: bấm đúp ChayCongCu.command.
+- Lần đầu cần mạng và mất vài phút (cài uv, Python, thư viện, tải model). Từ lần sau mở trong vài giây và chạy được khi không có mạng.
+- Một cửa sổ dòng lệnh đen/trắng hiện phía sau và in tiến độ. KHÔNG TẮT cửa sổ đó khi công cụ đang chạy.
+
+NẾU MÁY HIỆN CẢNH BÁO
+- Windows: "Windows đã bảo vệ PC của bạn" -> bấm "Thông tin thêm" -> "Vẫn chạy". Phần mềm diệt virus đôi khi hỏi vì file tự tải chương trình: chọn cho phép.
+- macOS: "không thể mở vì không xác định được nhà phát triển" -> vào Cài đặt hệ thống -> Quyền riêng tư & Bảo mật -> kéo xuống, bấm "Vẫn mở" cạnh tên ChayCongCu.command.
+  Nếu máy báo không có quyền chạy: mở Terminal, gõ  chmod +x  rồi kéo file ChayCongCu.command vào, bấm Enter.
+(Bản hướng dẫn có ảnh chụp sẽ bổ sung sau khi thử trên máy thật.)
+
+GIỌNG VÀ MODEL
+- Mặc định là model VieNeu-TTS-v3-Turbo, giọng Kim Thanh (giọng chuẩn của trường). Nên giữ nguyên để các câu nghe đồng đều.
+- Nếu đổi, cửa sổ hiện dải vàng cảnh báo và web sẽ đánh dấu "Khác giọng chuẩn". Bấm "↺ Mặc định" để quay lại.
+
+KHI GẶP LỖI
+- "Cần tải bản mới của công cụ": file xuất mới hơn công cụ. Tải bản mới theo đường dẫn trong thông báo.
+- Câu nào bị ⚠ thì bấm "Thử lại các câu lỗi". File đã xong được giữ nguyên.
+- Máy chậm hoặc ít RAM: tạo từng tình huống một.
+- Vẫn lỗi: chụp màn hình cả cửa sổ công cụ và cửa sổ dòng lệnh, gửi nhóm hỗ trợ.
+
+File mp3 được lưu trong: Tài liệu / ATCB Giọng đọc / <tên phạm vi>. Kèm report.csv (file, số giây, số ký tự, trạng thái).
+
+Cập nhật: nhận bản zip mới, giải nén đè hoặc ra thư mục mới. Thư viện và model đã tải được dùng lại.
